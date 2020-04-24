@@ -15,9 +15,9 @@
     "lintfix:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore ."
   },
   "lint": "run-p lint:*",
-    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "lintfix": "run-p lintfix:*",
-    "lintfix:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
+  "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+  "lintfix": "run-p lintfix:*",
+  "lintfix:js": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/dotenv": "^1.4.0",
@@ -25,7 +25,8 @@
     "fibers": "^5.0.0",
     "nuxt": "^2.0.0",
     "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass-loader": "^8.0.2",
+    "stylelint-scss": "^3.17.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^2.0.0",
@@ -42,6 +43,8 @@
     "lint-staged": "^10.1.7",
     "npm-run-all": "^4.1.5",
     "prettier": "^1.19.1",
-    "stylelint": "^10.1.0"
+    "stylelint": "^10.1.0",
+    "stylelint-config-recess-order": "^2.0.4",
+    "stylelint-config-standard": "^20.0.0"
   }
 }

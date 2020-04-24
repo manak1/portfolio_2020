@@ -1,5 +1,5 @@
 const Sass = require('sass')
-const Fiber = require('fiber')
+const Fiber = require('fibers')
 
 export default {
   mode: 'universal',
