@@ -1,6 +1,10 @@
 # Metamon
+どのプロジェクトでも使用できるNuxtテンプレ。
 
-> My doozie Nuxt.js project
+導入済みmodule
+- eslint
+- stylelint
+- json-refs
 
 ## Build Setup
 
