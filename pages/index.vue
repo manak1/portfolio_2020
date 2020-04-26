@@ -1,9 +1,14 @@
 <template>
-  <client-only>
-    <full-page :options="options">
-      <div></div>
-    </full-page>
-  </client-only>
+  <full-page id="fullpage" :options="options">
+    <div class="section fp-table active">
+      <div class="fp-tableCell">
+        <h3>Section 1</h3>
+      </div>
+    </div>
+    <div class="section">
+      ...
+    </div>
+  </full-page>
 </template>
 
 <script>
@@ -19,7 +24,6 @@ export default {
         animateAnchor: true,
         navigation: true,
         navigationPosition: 'left',
-        onLeave: this.onMove,
         easingcss3: 'cubic-bezier(0.77, 0.2, 0.05, 1)'
       }
     }
