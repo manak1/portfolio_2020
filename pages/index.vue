@@ -1,18 +1,24 @@
 <template>
-  <full-page id="fullpage" :options="options">
-    <div class="section fp-table active">
-      <div class="fp-tableCell">
-        <h3>Section 1</h3>
+  <client-only>
+    <full-page id="fullpage" class="p-fullpage" :options="options">
+      <div class="section fp-table active">
+        <div class="fp-tableCell">
+          <c-hero />
+        </div>
       </div>
-    </div>
-    <div class="section">
-      ...
-    </div>
-  </full-page>
+      <div class="section">
+        ...
+      </div>
+    </full-page>
+  </client-only>
 </template>
 
 <script>
+import CHero from '@/pages/-CHero'
 export default {
+  components: {
+    CHero
+  },
   data() {
     return {
       options: {
@@ -30,3 +36,14 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+html,
+body {
+  background-color: #071e3b;
+}
+
+.p-fullpage {
+  z-index: 999;
+}
+</style>
