@@ -2,27 +2,28 @@
   <section class="c-hero">
     <div class="c-hero__wrapper">
       <div class="c-profile">
-        <h2 class="c-profile__name">
+        <h2 class="c-profile__name profile_text">
           MANAKI<br />
           IKEDA
         </h2>
-        <p class="c-profile__position">
+        <p class="c-profile__position profile_text">
           Frontend Engineer
         </p>
       </div>
       <div id="moon" class="c-parallax">
-        <img
-          src="@/assets/image/hero/moon.svg"
-          alt="月の画像"
-          class="c-parallax__moon"
-          data-depth="0.6"
-        />
+        <div class="c-parallax__box" data-depth="0.3">
+          <img
+            src="@/assets/image/hero/moon.svg"
+            alt="月の画像"
+            class="c-parallax__moon moon"
+          />
+        </div>
 
         <div class="c-parallax__box" data-depth="0.6">
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star"
+            class="c-parallax__star star"
           />
         </div>
 
@@ -30,7 +31,7 @@
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star1"
+            class="c-parallax__star1 star"
           />
         </div>
 
@@ -38,7 +39,7 @@
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star2"
+            class="c-parallax__star2 star"
           />
         </div>
 
@@ -46,7 +47,7 @@
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star3"
+            class="c-parallax__star3 star"
           />
         </div>
 
@@ -54,7 +55,7 @@
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star4"
+            class="c-parallax__star4 star"
           />
         </div>
 
@@ -62,7 +63,7 @@
           <img
             src="@/assets/image/hero/hero_star.svg"
             alt=""
-            class="c-parallax__star5"
+            class="c-parallax__star5 star"
           />
         </div>
       </div>
@@ -79,6 +80,14 @@ export default {
 
     // eslint-disable-next-line no-unused-vars
     const parallaxInstance = new Parallax(scene2)
+
+    const tl = this.$gsap.timeline({
+      repeat: 0,
+      ease: this.$gsap.Linear.easeInOut(2)
+    })
+    tl.from('.star', 1.2, { y: '-100vh', ease: 'back.out(1.7)' }, 2)
+    tl.from('.profile_text', 1.5, { x: '-500', ease: 'expo.out' }, 3)
+    tl.from('.moon', 2, { x: '500', opacity: '0', ease: 'expo.out' }, 3)
   }
 }
 </script>
@@ -100,6 +109,7 @@ export default {
   position: absolute;
   top: 50%;
   margin-left: 12rem;
+  overflow: hidden;
   transform: translateY(-50%);
 
   &__name {
@@ -202,6 +212,12 @@ export default {
     left: 120%;
     height: 130px;
     transform: rotate(3deg);
+  }
+
+  &__moon {
+    position: relative;
+    top: 15%;
+    transform: translateY(50%);
   }
 }
 
