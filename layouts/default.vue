@@ -1,5 +1,6 @@
 <template>
   <div>
+    <div class="c-loader"></div>
     <div>
       <nuxt />
     </div>
@@ -21,6 +22,12 @@ export default {
     const scene = document.getElementById('background')
     // eslint-disable-next-line no-unused-vars
     const parallaxInstance = new Parallax(scene)
+
+    const tl = this.$gsap.timeline({
+      repeat: 0,
+      ease: this.$gsap.Linear.easeInOut(2)
+    })
+    tl.to('.c-loader', 1.2, { y: '-100vh', ease: 'expo.out' }, 1)
   }
 }
 </script>
@@ -36,5 +43,15 @@ export default {
   &__img {
     width: 1200px;
   }
+}
+
+.c-loader {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2000;
+  background-color: #020b16;
 }
 </style>
