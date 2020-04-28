@@ -1,6 +1,8 @@
 # Portfolio Website 2020
 Portfolio Website 2020.
 
+URL : https://manaki.netlify.app/#page1
+
 導入済みmodule
 - eslint
 - stylelint
