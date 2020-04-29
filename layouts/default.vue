@@ -2,6 +2,7 @@
   <div>
     <div class="c-loader"></div>
     <div>
+      <l-header />
       <nuxt />
     </div>
     <div id="background" class="c-background">
@@ -17,7 +18,11 @@
 
 <script>
 import Parallax from 'parallax-js'
+import LHeader from '@/components/Layout/LHeader'
 export default {
+  components: {
+    LHeader
+  },
   mounted() {
     const scene = document.getElementById('background')
     // eslint-disable-next-line no-unused-vars
@@ -35,7 +40,7 @@ export default {
 <style lang="scss" scoped>
 .c-background {
   position: fixed;
-  top: -100px;
+  top: -150px;
   left: 35%;
   z-index: 1;
   width: 1300px;

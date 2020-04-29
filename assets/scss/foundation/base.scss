@@ -40,14 +40,14 @@ $clr-txt-grey: $clr-gray;
   font-size: 16px;
   font-weight: normal;
   line-height: 1.5;
-  color: $clr-txt-primary;
+  color: $clr-white;
 }
 
 @mixin text-h1 {
   font-size: 50px;
   font-weight: bold;
   line-height: 1.5;
-  color: $clr-primary;
+  color: $clr-white;
 }
 
 @mixin text-h2 {
