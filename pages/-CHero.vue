@@ -11,7 +11,7 @@
         </p>
       </div>
       <div id="moon" class="c-parallax">
-        <div class="c-parallax__box" data-depth="0.3">
+        <div class="c-parallax__box" data-depth="0.5">
           <img
             src="@/assets/image/hero/moon.svg"
             alt="月の画像"
