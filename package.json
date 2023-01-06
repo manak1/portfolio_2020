@@ -34,7 +34,7 @@
     "@nuxtjs/style-resources": "^1.0.0",
     "fibers": "^5.0.0",
     "json-refs": "^3.0.15",
-    "nuxt": "^2.0.0",
+    "nuxt": "^2.15.8",
     "nuxt-fullpage.js": "0.0.3",
     "nuxt-gsap": "^0.1.4",
     "parallax-js": "^3.1.0",
